@@ -90,3 +90,7 @@
 .wd-last-post{
     border-bottom-style: solid;
 }
+body {
+    background-color: black;
+    font-color: white;
+}
