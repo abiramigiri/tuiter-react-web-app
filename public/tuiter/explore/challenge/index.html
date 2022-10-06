@@ -2,9 +2,9 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
-  <link href="../../vendors/css/bootstrap.css" rel="stylesheet"/>
+  <link href="../../../vendors/css/bootstrap.css" rel="stylesheet"/>
   <script src="https://kit.fontawesome.com/f5f2c74970.js" crossorigin="anonymous"></script>
-  <script src="../../vendors/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="../../../vendors/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <link href="index.css" rel="stylesheet"/>
   <title>Explore</title>
 </head>
@@ -12,10 +12,10 @@
   <div class="container">
     <div class="row m-2">
       <!--  COLUMN 1    -->
-      <div class="col-2 col-sm-1 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+      <div class="column-1 col-2 col-sm-1 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
         <nav class="list-group rounded">
           <a href="#" class="list-group-item list-group-item-action">
-            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-solid fa-t"></i>
           </a>
           <a href="#" class="list-group-item list-group-item-action">
             <i class="fa-solid fa-house-chimney pe-2 float-start pt-1"></i>
@@ -49,14 +49,14 @@
       </div>
 
       <!--  COLUMN 2    -->
-      <div class="col-6 col-sm-7 col-md-6 col-lg-7 col-xl-7 col-xxl-7 text-white">
+      <div class="column-2 col-6 col-sm-7 col-md-6 col-lg-7 col-xl-7 col-xxl-7 text-white">
         <div class="row mb-2">
           <div class="col-10 position-relative">
             <i class="fa-solid fa-magnifying-glass text-primary position-absolute p-2 m-1"></i>
             <input class="form-control rounded-pill p-2" type="text" placeholder="Search Tuiter" aria-label="search tuiter">
           </div>
           <div class="col-2">
-            <a href="explore-settings.html"><i class="fa-solid fa-gear fa-2x pt-1"></i></a>
+            <a href="../explore-settings.html"><i class="fa-solid fa-gear fa-2x pt-1"></i></a>
           </div>
         </div>
         <ul class="nav nav-tabs mb-2 navbar-expand">
@@ -78,8 +78,8 @@
         </ul>
         <main>
           <div class="position-relative">
-            <img src="../images/starship.jpeg" class="w-100" alt="SpaceX Starship">
-            <h1 class="wd-image-description text-white position-absolute bottom-0">SpaceX's Starship</h1>
+            <img src="../../images/starship.jpeg" class="w-100" alt="SpaceX Starship">
+            <h1 class="wd-image-description text-white position-absolute bottom-0">SpaceX's Starship<i class="fa-brands fa-space-awesome"></i></h1>
           </div>
 
           <div class="row border m-0">
@@ -91,7 +91,7 @@
               <p class="text-black small fw-bold">React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs</p>
             </div>
             <div class="col-3 wd-tuit-img">
-              <img src="../images/reactjs.png" class="float-end rounded mt-2" alt="react js logo">
+              <img src="../../images/reactjs.png" class="float-end rounded mt-2" alt="react js logo">
             </div>
           </div>
           <div class="row border m-0">
@@ -103,7 +103,7 @@
             <div class="text-secondary small pt-0">123K Tuits</div>
             </div>
             <div class="col-3 wd-tuit-img">
-              <img src="../images/javascript.png" class="float-end rounded mt-2" alt="javascript logo">
+              <img src="../../images/javascript.png" class="float-end rounded mt-2" alt="javascript logo">
             </div>
           </div>
           <div class="row border m-0">
@@ -113,7 +113,7 @@
             <div class="text-secondary small pt-0">123K Tuits</div>
             </div>
             <div class="col-3 wd-tuit-img">
-              <img src="../images/jquery.png" class="float-end rounded mt-2" alt="javascript logo">
+              <img src="../../images/jquery.png" class="float-end rounded mt-2" alt="javascript logo">
             </div>
           </div>
           <div class="row border m-0">
@@ -123,20 +123,20 @@
             <div class="text-secondary small pt-0">123K Tuits</div>
             </div>
             <div class="col-3 wd-tuit-img">
-              <img src="../images/nodejs.png" class="float-end rounded mt-2" alt="javascript logo">
+              <img src="../../images/nodejs.png" class="float-end rounded mt-2" alt="javascript logo">
             </div>
           </div>
         </main>
       </div>
 
       <!--  COLUMN 3    -->
-      <div class="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-3 col-xxl-3 text-white">
-        <div class="row wd-follow-row py-2 border rounded-top b-gray-400 ms-1">
+      <div class="column-3 d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-3 col-xxl-3 text-white">
+        <div class="row wd-top-row py-2 border rounded-top b-gray-400 ms-1">
           <div class="text-black fw-bold small">Who to follow</div>
         </div>
-        <div class="row wd-follow-row py-2 border border-top-0 b-gray-400 ms-1">
+        <div class="row py-2 border border-top-0 b-gray-400 ms-1">
           <div class="col-2 wd-logo rounded-circle rounded-circle">
-            <img src="../images/java.png">
+            <img src="../../images/java.png">
           </div>
           <div class="col-7">
             <span class="fw-bold text-black small">Java<i class="fa-solid fa-circle-check text-black ps-2"></i></span>
@@ -146,21 +146,21 @@
             <button type="button" class="btn btn-primary rounded-pill float-end">Follow</button>
           </div>
         </div>
-        <div class="row wd-follow-row py-2 border border-top-0 b-gray-400 ms-1">
+        <div class="row py-2 border border-top-0 b-gray-400 ms-1">
           <div class="col-2 wd-logo rounded-circle">
-            <img src="../images/relativity.png">
+            <img src="../../images/relativity.png">
           </div>
           <div class="col-7">
             <span class="fw-bold text-black small">Relativity Space<i class="fa-solid fa-circle-check text-black ps-2"></i></span>
             <div class="wd-handle text-secondary small">@relativityspace</div>
           </div>
           <div class="col-3 mt-1">
-            <button type="button" class="btn btn-primary rounded-pill float-end">Follow</button>
+            <button type="button" class="btn btn-primary rounded-pill float-end wd-follow-button">Follow</button>
           </div>
         </div>
-        <div class="row wd-follow-row py-2 border border-top-0 b-gray-400 ms-1">
+        <div class="row py-2 border border-top-0 b-gray-400 ms-1">
           <div class="col-2 wd-logo rounded-circle">
-            <img src="../images/virgin.png">
+            <img src="../../images/virgin.png">
           </div>
           <div class="col-7">
             <span class="fw-bold text-black small">Virgin Galactic<i class="fa-solid fa-circle-check text-black ps-2"></i></span>
@@ -170,9 +170,9 @@
             <button type="button" class="btn btn-primary rounded-pill float-end">Follow</button>
           </div>
         </div>
-        <div class="row wd-follow-row py-2 border border-top-0 b-gray-400 ms-1">
+        <div class="row py-2 border border-top-0 b-gray-400 ms-1">
           <div class="col-2 wd-logo rounded-circle">
-            <img src="../images/NASA.png">
+            <img src="../../images/NASA.png">
           </div>
           <div class="col-7">
             <span class="fw-bold text-black small">NASA<i class="fa-solid fa-circle-check text-black ps-2"></i></span>
@@ -182,9 +182,9 @@
             <button type="button" class="btn btn-primary rounded-pill float-end">Follow</button>
           </div>
         </div>
-        <div class="row wd-follow-row py-2 border rounded-bottom border-top-0 b-gray-400 ms-1">
+        <div class="row wd-bottom-row py-2 border rounded-bottom border-top-0 b-gray-400 ms-1">
           <div class="col-2 wd-logo rounded-circle">
-            <img src="../images/Tesla.png">
+            <img src="../../images/Tesla.png">
           </div>
           <div class="col-7">
             <span class="fw-bold text-black small">Telsa<i class="fa-solid fa-circle-check text-black ps-2"></i></span>
@@ -198,6 +198,3 @@
 
     </div>
   </div>
-
-</body>
-</html>
