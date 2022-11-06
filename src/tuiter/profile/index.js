@@ -31,7 +31,7 @@ const ProfileComponent = () => {
 
             <div className="position-relative">
                 <img className="w-100" src={`/images/${profile.bannerPicture}`} alt="banner_pic"/>
-                <img className="position-absolute wd-profile-pic rounded-circle" src={`/images/${profile.profilePicture}`} width={100}/>
+                <img className="position-absolute wd-profile-pic rounded-circle" alt='profile pic' src={`/images/${profile.profilePicture}`} width={100}/>
                 <Link
                     to="/tuiter/edit-profile"
                     className="btn btn-primary rounded-pill float-end mt-2 me-2"
