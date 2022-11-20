@@ -1,14 +1,14 @@
 [{
-  "firstName": "Jose",
-  "lastName": "Annunziato",
-  "handle": "@jannunzi",
+  "firstName": "Abirami",
+  "lastName": "Giri",
+  "handle": "@abirami",
   "profilePicture": "nodejs.png",
   "bannerPicture": "js.png",
-  "bio": "Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retuits and likes are not endorsements.",
-  "website": "surghkrhvjkdss.com",
+  "bio": "Software Engineer",
+  "website": "abirami.com",
   "location": "Boston, MA",
-  "dateOfBirth": "01 January 1968",
-  "dateJoined": "April 2009",
-  "followingCount": 340,
-  "followersCount": 223
+  "dateOfBirth": "20 January 1998",
+  "dateJoined": "April 2019",
+  "followingCount": 3400,
+  "followersCount": 2123
 }]
