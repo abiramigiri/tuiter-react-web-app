@@ -5,26 +5,28 @@
     <title>Edit Profile</title>
 </head>
 <body>
-<a href="navigation.html">Back</a>
+<p><a href="profile.html">Back</a></p>
 <h1>Tuiter</h1>
+
 <h2>Edit Profile</h2>
 <a href="profile.html">Save</a>
-<img alt="banner-img" height="200" src="banner.jpg" width=100%>
-<input type='file'/>
-<br/>
-<img alt="my-img" height="48" src="deku.jpg" width="48">
-<br/>
-<input type='file'/>
+<img src="banner.jpg"
+     width= "100%" height="200px"/>
+<input type="file" id="img1" name="img1" accept="image/*"/>
+<br>
+<img src="profile.jpg"
+     width= "48px" height="48px"/>
+<br>
+<input type="file" id="img2" name="img2" accept="image/*"/>
 <hr>
-<label for="name">Name</label>
-<br/>
-<input id="name" placeholder="WebDev"/>
-<hr>
-<label for="bio">Bio</label>
-<br/>
-<textarea id="bio" cols="50" rows="10"
-          placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-></textarea>
+<form id="text-fields">
+    <label for="name">Name</label><br>
+    <input id="name" placeholder="WebDev" value="WebDev"/><br/>
 
+<hr>
+<label for="name">Bio</label><br>
+<textarea rows="10" cols="50" placeholder="Bio">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</textarea>
+</form>
 </body>
 </html>

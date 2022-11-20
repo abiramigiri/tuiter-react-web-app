@@ -1,33 +1,29 @@
 [
   {
-    "_id": 1,
-    "username": "Elon Musk",
+    "userName": "Elon Musk",
+    "userImage": "../../images/elon.png",
     "handle": "elonmusk",
-    "avatar": "elon_avatar.jpg",
     "time": "23h",
-    "message": "Amazing show about @Inspiration4x mission!",
-    "image": "inspiration4x.jpeg",
-    "title": "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
-    "body": "From trainning to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian on orbital space ...",
+    "title": "Amazing show about <span><a class=\"wd-dodgerblue\" href=\"https://twitter.com/inspiration4x\">@inspiration4x</a></span> mission!",
+    "image": "../../images/elon.png",
+    "desc1": "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
+    "desc2": "From training to launch to landing, this all-access docuseries rides along with the Inspiration4x crew on the first civilian orbital space ...",
     "link": "netflix.com",
-    "comment": "4.2K",
-    "retweet": "3.5K",
-    "like": "37.5K"
+    "comments": "4.2K",
+    "retweets": "3.5K",
+    "likes": "37.5K"
   },
   {
-    "_id": 2,
-    "username": "New York Post",
+    "userName": "New York Post",
+    "userImage": "https://variety.com/wp-content/uploads/2020/10/New-York-Post-Twitter.png",
     "handle": "nypost",
-    "avatar": "newyorkpost_avatar.jpg",
     "time": "23h",
-    "message": "Grimes seen reading Karl Marax following split with world's richest man Elon Musk trib.al/nx2Gfaq",
-    "image": "karlmarx.webp",
-    "title": "",
-    "body": "",
-    "link": "",
-    "comment": "965",
-    "retweet": "2.4K",
-    "like": "4K"
+    "title": "Grimes seen reading Karl Marx following split with world's richest man Elon Musk <span><a class=\"wd-dodgerblue\" href=\"trib.al/nx2Gfaq\">trib.al/nx2Gfaq</a></span>",
+    "image": "https://nypost.com/wp-content/uploads/sites/2/2021/10/grimes-05.jpg?quality=90&strip=all",
+    "content": "",
+    "link": "trib.al/nx2Gfaq",
+    "comments": "965",
+    "retweets": "2.4K",
+    "likes": "4K"
   }
-
 ]

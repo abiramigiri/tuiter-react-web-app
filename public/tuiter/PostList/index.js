@@ -1,14 +1,14 @@
-import posts from "./posts.js";
 import PostItem from "./PostItem.js";
-
-const PostList = () => {
+import posts from "./posts.js";
+const PostItems = () => {
     return (`
-        <ul class="list-group mb-2">
+            <ul class="list-group">
             ${posts.map(post => {
-        return(PostItem(post));
-    }).join('')}
-        </ul>
-    `)
+        return (PostItem(post));
+    }).join('')
+    }
+            </ul>
+`);
 }
 
-export default PostList;
+export default PostItems;

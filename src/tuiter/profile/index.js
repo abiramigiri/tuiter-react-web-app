@@ -1,63 +1,49 @@
-import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faArrowLeft, faBirthdayCake, faCalendar} from '@fortawesome/free-solid-svg-icons'
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-
-import "./index.css"
+import {faLocationPin} from "@fortawesome/free-solid-svg-icons/faLocationPin";
+import './index.css';
 
 const ProfileComponent = () => {
-    const profile = useSelector(state => state.profile);
-
-    const getMonthName = (monthNum) => {
-        const date = new Date();
-        date.setMonth(monthNum - 1);
-        return date.toLocaleString([], {month: 'long'});
-    }
-
-    const dob = profile.dateOfBirth.split("-");
-    const dateJoin = profile.dateJoined.split("-");
-
+    const profile = useSelector(state => state.profile)
     return (
-        <div className="bg-light rounded">
-            <div className="row">
-                <div className="col-1 my-auto fs-4">
-                    <i className="fa-solid fa-arrow-left-long ps-3"></i>
+        profile.map(profile =>
+            <div>
+                <div className="row">
+                    <div className="col-1 align-items-center p-3 ps-4">
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </div>
+                    <div className="col-11">
+                        <span className="fw-bolder">{profile.firstName} {profile.lastName}</span><br/>
+                        <span className="text-muted">6114 Tuits</span>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <img src={"../../images/" + profile.bannerPicture} width="100%" height="250px"/>
+                        <img src={"../../images/" + profile.profilePicture} height="100px" width="100px" className="rounded-circle wd-profile-picture bg-white ms-2"/>
+                        <Link to="/tuiter/edit-profile">
+                            <button className="btn btn-outline-primary rounded-pill float-end m-2">Edit Profile</button></Link>
+                    </div>
                 </div>
 
-                <div className="col-11 ps-5">
-                    <h5>{profile.firstName} {profile.lastName}</h5>
-                    <h6 className="text-dark">{profile.tuits} Tuits</h6>
+                <h2 className="m-0">{profile.firstName} {profile.lastName}</h2>
+
+                <div className="text-secondary mb-3">{profile.handle}</div>
+                <div className="mb-3">{profile.bio}</div>
+                <div className="mb-3">Website: {profile.website}</div>
+                <div className="row mb-3">
+                    <div className="col-3"><FontAwesomeIcon icon={faLocationPin}/> {profile.location}</div>
+                    <div className="col-5"><FontAwesomeIcon icon={faBirthdayCake}/> Born: {profile.dateOfBirth}</div>
+                    <div className="col-4"><FontAwesomeIcon icon={faCalendar}/> Joined: {profile.dateJoined}</div>
                 </div>
-            </div>
-
-            <div className="position-relative">
-                <img className="w-100" src={`/images/${profile.bannerPicture}`} alt="banner_pic"/>
-                <img className="position-absolute wd-profile-pic rounded-circle" src={`/images/${profile.profilePicture}`} width={100} alt="profile_pic"/>
-                <Link
-                    to="/tuiter/edit-profile"
-                    className="btn btn-primary rounded-pill float-end mt-2 me-2"
-                >
-                    Edit Profile
-                </Link>
-            </div>
-            <br/>
-
-            <div className="mt-5 p-3">
-                <h5 className="fw-bold">{profile.firstName} {profile.lastName}</h5>
-                <h6 className="text-dark">{profile.handle}</h6>
-                <p className="text-white">{profile.bio}</p>
-
-                <div className="mb-2">
-                    <span className="me-4"><i className="bi bi-geo-alt me-2"></i>{profile.location}</span>
-                    <span className="me-4"><i className="bi bi-balloon me-2"></i>Born {getMonthName(dob[1])} {dob[2]}, {dob[0]}</span>
-                    <span><i className="bi bi-calendar3 me-2"></i>Joined {getMonthName(dateJoin[1])} {dateJoin[0]}</span>
+                <div className="row">
+                    <div className="col-3"><b>{profile.followingCount}</b> Following</div>
+                    <div className="col-3"><b>{profile.followersCount}</b> Followers</div>
                 </div>
+            </div>)
 
-                <div>
-                    <span className="me-4">{profile.followingCount} Following</span>
-                    <span>{profile.followersCount} Followers</span>
-                </div>
-            </div>
-        </div>
     )
 }
 

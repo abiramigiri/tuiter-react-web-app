@@ -1,3 +1,9 @@
+// export default [
+//     'Buy milk',
+//     'Pickup the kids',
+//     'Walk the dog'
+// ];
+
 export default [
     {   title: 'Buy milk', status: 'CANCELED',
         done: true,
@@ -10,3 +16,4 @@ export default [
         done: false,
     },
 ];
+

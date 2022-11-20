@@ -1,15 +1,15 @@
-import whos from "./who.js"
 import WhoToFollowListItem from "./WhoToFollowListItem.js";
-
+import who from "./who.js";
 const WhoToFollowList = () => {
     return (`
-        <ul class="list-group">
-        <li class="list-group-item">Who to follow</li>
-            ${whos.map(who => {
-        return(WhoToFollowListItem(who));
-    }).join('')}
-        </ul>
-    `)
+            <div class="row py-2 text-bg-light wd-post-summary rounded-top ms-1">
+                <div class="fw-bold small">Who to follow</div>
+            </div>
+            ${who.map(who => {
+                    return (WhoToFollowListItem(who));
+                }).join('')
+            }
+`);
 }
 
 export default WhoToFollowList;

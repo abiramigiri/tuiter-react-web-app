@@ -1,17 +1,14 @@
 import React from "react";
-
+import TuitsList from "../tuits/tuits-list";
 import WhatsHappening from "./whats-happening";
-import TuitList from "../tuit-list";
-
 
 const HomeComponent = () => {
-    return (
+    return(
         <>
             <h4>Home</h4>
-            <WhatsHappening />
-            <TuitList />
+            <WhatsHappening/>
+            <TuitsList/>
         </>
-    )
-}
-
+    );
+};
 export default HomeComponent;

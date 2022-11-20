@@ -1,4 +1,6 @@
-.wd-profile-pic {
-    bottom: -50px;
-    left: 20px;
+.wd-profile-picture {
+    position: absolute;
+    top: 250px;
+    left: 16px;
+    font-size: 30px;
 }

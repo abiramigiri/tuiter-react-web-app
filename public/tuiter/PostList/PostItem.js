@@ -1,58 +1,46 @@
-const PostItem = (post) => {
-    const {username, handle, avatar, time, message, image, title, body, link, comment, retweet, like} = post;
+const PostItem = (posts) => {
+    var innerHtmlLink = ''
+    if (`${posts.link}`!=''){
+        innerHtmlLink= `
+        <li class="list-group-item wd-bg-black">
+        <span class=""> ${posts.desc1}</span><br/>
+        <span class="wd-gray">${posts.desc2}</span>
+        <br/>
+        <div class="wd-gray"><i class="fas fa-link"></i>
+        <a href="https://${posts.link}" class="wd-dec">${posts.link}</a></div>
+        </li>`
+    }
 
+    var title =''
+    if(`${posts.title}`.includes("#B") ){
+        title = `${posts.title}`
+        title = title.replace("#B",`<a href="https://${posts.link}">`);
+        title = title.replace("#B!",`</a>`);
+        console.log(title)
+    }
     return (`
-        <li class="list-group-item bg-black">
-            <div class="row">
-                <div class="col-1">
-                    <img class="rounded-circle" src=${avatar} width="50px" height="50px"/>
-                </div>
-                
-                <div class="col-11 ps-4">
-                    <div class="fw-bolder">
-                        ${username} <i class="fas fa-check-circle"></i>
-                        <span class="text-secondary fw-normal">@${handle} · ${time}</span>
-                    </div>
-                    
-                    <div class="mb-2">${message}</div>
-                    
-                    <div class="border border-secondary rounded">
-                        <img class="rounded" src=${image} width="100%"/>
-                        
-                        ${title ?
-        `<div class="border-top border-secondary ps-2 pt-2">${title}</div>`
-        : ""}
-                        
-                        ${body ?
-        `<div class="text-secondary ps-2">${body}</div>`
-        : ""}
-                        
-                        ${link ?
-        `<div class="text-secondary ps-2 pb-2">
-                                <i class=\"fa-solid fa-link\"></i> ${link}</div>`
-        : ""}
-                        
-                    </div>
-                    
-                    <div class="row text-secondary my-3">
-                        <div class="col">
-                            <i class="fa-regular fa-comment pe-3"></i>${comment}
-                        </div>
-                        <div class="col">
-                            <i class="fa-solid fa-retweet pe-3"></i>${retweet}
-                        </div>
-                        <div class="col">
-                            <i class="fa-regular fa-heart pe-3"></i>${like}
-                        </div>
-                        <div class="col">
-                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                        </div>
-                    </div>
-                </div>
+    <li class="list-group-item wd-bg-black">
+    <div class="row">
+            <div class="col-2 col-lg-2"><img src=${posts.userImage} class="wd-dp" /></div>
+            <div class="col-10 col-lg-10">
+            ${posts.userName} <i class="fa fa-check-circle"></i>
+            <div class="wd-gray">@${posts.handle} <span>&nbsp;&#183;&nbsp;</span> ${posts.time}</div>
+            <div class="small pb-2">${title}</div>
+            <ul class="list-group">
+                <li class="list-group-item wd-inner">
+                    <img src=${posts.image} class="wd-inner"/>
+                </li>
+                ${innerHtmlLink}
+                <li class="wd-nostyle wd-gray">
+                    <i class="far fa-comment wd-iFirst"></i>${posts.comments}
+                    <i class="fas fa-retweet wd-i"></i>${posts.retweets}
+                    <i class="far fa-heart wd-i"></i>${posts.likes}
+                    <i class="fas fa-upload wd-i"></i>
+                </li>
+            </ul>
             </div>
-            
-        </li>
-    `)
+    </div>   
+    </li>
+    `);
 }
-
 export default PostItem;

@@ -1,58 +1,56 @@
-import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faRetweet, faHeart, faUpload, faCircleCheck, faLink, faThumbsDown} from '@fortawesome/free-solid-svg-icons'
+import "../home/index.css"
 
-const PostItem = ({post}) => {
-    return (
-        <li className="list-group-item bg-black">
-            <div className="row">
-                <div className="col-1">
-                    <img className="rounded-circle" src={`/images/${post.avatar}`} width="50px" height="50px" alt="user_avatar"/>
+const PostItem = (
+    {
+        post
+    }) => {
+    let hasContent = true;
+    let hasTitle = true;
+    let titleClass = "pt-2 pb-1";
+    let contentClass = "pb-2";
+
+    if (post.title === "") {
+        hasTitle = false;
+        titleClass = "";
+    }
+    if (post.content === "") {
+        hasContent = false;
+        contentClass = "";
+    }
+
+    return(
+        <li className="list-group-item wd-bg-black">
+            <div className="row pt-2">
+            <div className="col-2">
+                <img src={post.userImage} height="40px" width="40px" className="rounded-circle"/>
+            </div>
+            <div className="col-10">
+                <b className="text-black">{post.userName} </b> <span className="text-muted"> <FontAwesomeIcon icon={faCircleCheck} className="wd-dodgerblue"/> @{post.handle} · {post.time}</span>
+                <p dangerouslySetInnerHTML={{__html: post.title}}></p>
+                <div className="row rounded wd-border-gray me-2">
+                    <img className=" rounded wd-border-bottom-gray p-0" src={post.image} width="100%" height="264px"/>
+
+                    <span className={`text-black ${titleClass}`}><b>{post.desc1}</b></span>
+                    <span  className={`text-black ${contentClass}`}>{post.desc2}</span>
+                    <div className="wd-gray">
+                        <a href="https://${post.link}" className="wd-textdec wd-gray"><FontAwesomeIcon icon={faLink} /> {post.link}</a>
+                    </div>
                 </div>
+                <div className="row pt-2 pb-2">
 
-                <div className="col-11 ps-4">
-                    <div className="fw-bolder">
-                        {post.username} <i className="fa-solid fa-circle-check pe-2"></i>
-                        <span className="text-secondary fw-normal">@{post.handle} · {post.time}</span>
-                    </div>
+                    <div className="col-2"><a className="wd-gray wd-textdec"  href="#"><i className="bi bi-chat"></i> <span className="wd-post">{post.comments}</span></a></div>
+                    <div className="col-2"><a className="wd-gray wd-textdec"  href="#"><FontAwesomeIcon icon={faRetweet} /> <span className="wd-post">{post.retweets}</span></a></div>
+                    <div className="col-2"><a className="wd-gray wd-textdec"  href="#"><FontAwesomeIcon icon={faHeart} /> <span className="wd-post">{post.likes}</span></a></div>
+                    <div className="col-2"><a className="wd-gray wd-textdec"  href="#"><FontAwesomeIcon icon={faThumbsDown} /> <span className="wd-post">{post.dislikes}</span></a></div>
+                    <div className="col-2"><a className="wd-gray wd-textdec"  href="#"><FontAwesomeIcon icon={faUpload} /> <span className="wd-post"></span></a></div>
 
-                    <div className="mb-2">{post.message}</div>
-
-                    <div className="border border-secondary rounded">
-                        <img className="rounded" src={`/images/${post.image}`} width="100%" alt="post_image"/>
-
-                        {post.title ?
-                        <div className="border-top border-secondary ps-2 pt-2">{post.title}</div>
-                        : ""}
-
-                        {post.body ?
-                        <div className="text-secondary ps-2">{post.body}</div>
-                        : ""}
-
-                        {post.link ?
-                        <div className="text-secondary ps-2 pb-2">
-                                <i className="bi bi-link-45deg"></i> {post.link}</div>
-                        : ""}
-
-                    </div>
-
-                    <div className="row text-secondary my-3">
-                        <div className="col">
-                            <i className="bi bi-chat pe-2"></i>{post.comment}
-                        </div>
-                        <div className="col">
-                            <i className="bi bi-arrow-repeat pe-2"></i>{post.retweet}
-                        </div>
-                        <div className="col">
-                            <i className="bi bi-heart pe-2"></i>{post.like}
-                        </div>
-                        <div className="col">
-                            <i className="bi bi-box-arrow-up pe-2"></i>
-                        </div>
-                    </div>
                 </div>
             </div>
-
+        </div>
         </li>
-    )
+    );
 }
 
 export default PostItem;

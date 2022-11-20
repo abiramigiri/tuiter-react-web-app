@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Index</title>
     <!--style>
-       p {
-           background-color: blue;
-           color: white;
-       }
-   </style-->
+        p {
+            background-color: blue;
+            color: white;
+        }
+    </style-->
     <link href="index.css"
           rel="stylesheet"/>
-    <meta charset="UTF-8">
-    <title>Title</title>
 </head>
+
 <body>
 <h1>Cascading Style Sheet (CSS)</h1>
 <h2>Style attribute and tag</h2>
@@ -22,20 +23,23 @@
     very convenient it is considered bad practice
     and you should avoid using the style attribute
 </p>
+
 <h3>Style tag</h3>
-<p>
-    A slightly better way to configure look and feel
-    is to declare CSS rules in the STYLE tag in the
-    header and then refer to the tag by their name,
-    ID, or class This paragraph's style is set by a
-    rule referring to the P tags
+             <p>
+             A slightly better way to configure look and feel
+             is to declare CSS rules in the STYLE tag in the
+             header and then refer to the tag by their name,
+             ID, or class This paragraph's style is set by a
+rule referring to the P tags
 </p>
+
 <h3>Link tag</h3>
 <p>
     The best way to apply CSS rules is to declare
     them in a separate CSS file and load it with
     the LINK tag. Always use this method.
 </p>
+
 <h3>ID selectors</h3>
 <p id="id-selector-1">
     Instead of changing the look and
@@ -48,6 +52,7 @@
     different ID and a different look
     and feel
 </p>
+
 <h3>Class selectors</h3>
 <p class="class-selector">
     Instead of using IDs to refer
@@ -56,6 +61,7 @@
 <h4 class="class-selector">
     This heading has same style as
     paragraph above</h4>
+
 <div class="selector-1">
     <h3>Document structure selectors</h3>
     <div class="selector-2">
@@ -75,23 +81,27 @@
         </p>
     </div>
 </div>
+
 <h2>Colors</h2>
 <h3 class="fg-color-blue">Foreground color</h3>
 <p class="fg-color-red">
     The text in this paragraph is red but
     <span class="fg-color-green">this text is green</span>
 </p>
+
 <h3 class="bg-color-blue fg-color-white">Background color</h3>
 <p class="bg-color-red fg-color-black">
     This background of this paragraph is red but
     <span class="bg-color-green fg-color-white"> the background
   of this text is green and the foreground white</span>
 </p>
+
 <h2>Borders</h2>
 <p class="border-fat border-red border-solid">
     Solid fat red border</p>
 <p class="border-thin border-blue border-dashed">
     Dashed thin blue border</p>
+
 <h2>Padding</h2>
 <div class="padded-top-left border-fat
             border-red border-solid
@@ -109,6 +119,7 @@
             bg-color-blue fg-color-white">
     Padded all around
 </div>
+
 <h2>Margins</h2>
 <div class="margin-bottom
             padded-top-left
@@ -131,6 +142,7 @@
             fg-color-white">
     Margin all around
 </div>
+
 <h3>Rounded corners</h3>
 <p class="rounded-corners-top border-thin border-blue border-solid padding-fat">
     Rounded corners on the top
@@ -144,6 +156,7 @@
 <p class="rounded-corners-inline border-thin border-blue border-solid padding-fat">
     Different rounded corners
 </p>
+
 <h2>Dimension</h2>
 <div>
     <div class="dimension-portrait bg-color-yellow">
@@ -157,6 +170,7 @@
         Square
     </div>
 </div>
+
 <h2>Position</h2>
 <h3>Relative</h3>
 <div>
@@ -172,6 +186,7 @@
     <div class="bg-color-red dimension-square">
         Square</div>
 </div>
+
 <h3>Absolute position</h3>
 <div class="pos-relative">
     <div class="pos-absolute-10-10
@@ -186,6 +201,7 @@
         bg-color-red dimension-square">
         Square      </div>
 </div><br/><br/><br/><br/><br/><br/><br/>
+
 <h3>Fixed position</h3>
 
 Checkout the blue square that says
@@ -201,6 +217,7 @@ rest of the page. Its position is
             fg-color-white">
     Fixed position
 </div>
+
 <h2>Z index</h2>
 <div class="pos-relative">
     <div class="pos-absolute-10-10
@@ -216,6 +233,7 @@ rest of the page. Its position is
         bg-color-red dimension-square">
         Square</div>
 </div><br/><br/><br/><br/><br/><br/><br/>
+
 <h2>Float</h2>
 <div>
     <div class="float-left dimension-portrait bg-color-yellow">
@@ -238,6 +256,7 @@ rest of the page. Its position is
         <h3>Right half</h3>
     </div>
 </div>
+
 <div class="grid-row">
     <div class="grid-col-third-page bg-color-green
               fg-color-white">
@@ -276,12 +295,12 @@ rest of the page. Its position is
     <li>Item 2</li>
     <li>Item 3</li>
 </ul>
-
-<ul class="rotate-list-1">
-    <li>Item 123</li>
-    <li>Item 245</li>
-    <li>Item 355</li>
-</ul>
+<br>
+<ol class="rotate-list-counterclockwise">
+    <li>Item A</li>
+    <li>Item B</li>
+    <li>Item C</li>
+</ol>
 
 <h3>Rotating list items</h3>
 <ul class="rotate-list-items">
@@ -291,9 +310,9 @@ rest of the page. Its position is
 </ul>
 
 <h3>Rotating an image</h3>
-<img class="rotate-image" width="400px"
-     src="https://static.demilked.com/wp-content/uploads/2014/09/table-design-ideas-dining-room-kitchen-interior-16.jpg"/>
-
+<img class="rotate-image" width="400px" height="200px"
+     src="https://pyxis.nymag.com/v1/imgs/7aa/21a/c1de2c521f1519c6933fcf0d08e0a26fef-27-spongebob-squarepants.rsquare.w700.jpg"/>
+<br><br>
 <h3>Rotating a table</h3>
 <br/><br/>
 <table border="1" class="rotate-table">
@@ -327,7 +346,7 @@ rest of the page. Its position is
 
 <h2>Animations</h2>
 <h3>Keyframe animations</h3>
-<p class="animation-keyframes">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+<p class="animation-keyframes">SpongeBob SquarePants (or simply SpongeBob) is an American animated comedy television series created by marine science educator and animator Stephen Hillenburg for Nickelodeon.</p>
 
 <div class="flex-container">
     <div class="flex-box flex-box-1">Box 1</div>
@@ -338,7 +357,6 @@ rest of the page. Its position is
         Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
     </div>
 </div>
-
 <div class="flex-container-1">
     <div class="flex-box flex-box-1">Box 1</div>
     <div class="flex-box flex-box-2">
@@ -348,7 +366,6 @@ rest of the page. Its position is
         Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
     </div>
 </div>
-
 <div class="flex-container-2">
     <div class="flex-box flex-box-1">Box 1</div>
     <div class="flex-box flex-box-2">
@@ -358,7 +375,6 @@ rest of the page. Its position is
         Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
     </div>
 </div>
-
 <div class="flex-container-3">
     <div class="flex-box flex-box-1">Box 1</div>
     <div class="flex-box flex-box-2">
@@ -368,7 +384,6 @@ rest of the page. Its position is
         Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
     </div>
 </div>
-
 <div class="flex-container-4">
     <div class="flex-box flex-box-1">Box 1</div>
     <div class="flex-box flex-box-2">
@@ -378,7 +393,6 @@ rest of the page. Its position is
         Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
     </div>
 </div>
-
 <div class="flex-container-5">
     <div class="flex-box flex-box-1">Box 1</div>
     <div class="flex-box flex-box-2">
@@ -388,7 +402,6 @@ rest of the page. Its position is
         Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
     </div>
 </div>
-
 <div class="flex-container-6">
     <div class="flex-box flex-box-1">Box 1</div>
     <div class="flex-box flex-box-2">
@@ -398,8 +411,16 @@ rest of the page. Its position is
         Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
     </div>
 </div>
-
 <div class="flex-container-7">
+    <div class="flex-box flex-box-1">Box 1</div>
+    <div class="flex-box flex-box-2">
+        Box 2 Box 2<br/>Box 2 Box 2
+    </div>
+    <div class="flex-box flex-box-3">
+        Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3<br/>Box 3 Box 3 Box 3
+    </div>
+</div>
+<div class="flex-container-8">
     <div class="flex-box flex-box-1">Box 1</div>
     <div class="flex-box flex-box-2">
         Box 2 Box 2<br/>Box 2 Box 2
@@ -413,13 +434,14 @@ rest of the page. Its position is
 <p class="media-query">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </p>
-<p class="test-p">
-    Test text here for paragraph
+
+<h4 class="media-query-heading">
+    Heading for testing Media Queries
+</h4>
+<p class="media-query-paragraph">
+    This is a paragraph used to test media queries.
 </p>
-<div class="test-div">
-    Test text here for div
-</div>
 
-
+<div class="flex-box flex-box-1 media-query-div">Box 1</div>
 </body>
 </html>

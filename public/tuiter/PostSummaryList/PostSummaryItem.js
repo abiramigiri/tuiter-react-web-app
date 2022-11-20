@@ -1,25 +1,22 @@
-const PostSummaryItem = (post) => {
-    const {topic, userName, time, title, image, tweets} = post
+const PostSummaryItem = (posts) => {
+    var innerHtml = ''
+    if (`${posts.topic}`!=''){
+        innerHtml= `<a href="#" class="text-secondary text-decoration-none">${posts.topic}</a><br/>`
+    }
     return (`
-        <li class="list-group-item">
-              <div class="row">
-                <div class="col-10">
-                  <div class="text-secondary">${topic}</div>
-                  <div class="fw-bolder">
-                    ${userName} <i class="fas fa-check-circle"></i>
-                    <span class="text-secondary fw-normal"> - ${time}</span>
-                  </div>
-                  <div class="fw-bolder pe-2">
-                    ${title}
-                  </div>
-                  ${tweets ? `<div class="text-secondary">${tweets} Tweets</div>` : ""}
-                </div>
-                <div class="col-2">
-                  <img class="float-end rounded" src=${image} width="100px" height="100px"/>
-                </div>
-              </div>
-        </li>
-    `)
+    <div class="row m-0 bg-light wd-post-summary">
+        <div class="col-9">
+        <div class="small">${innerHtml}</div>
+            <span class="text-light fw-bold small"><a href="#" class="text-white text-decoration-none">${posts.userName} </a>
+            <i class="fa fa-check-circle text-white ps-2"></i></span>
+            <span class="text-secondary small"> - ${posts.time}</span>
+            <p class="text-white small fw-bold">${posts.title}</p>
+        </div>
+        <div class="col-3 wd-icon-img">
+            <img src=${posts.image} class="float-end rounded mt-2">
+        </div>
+    </div>
+    
+    `);
 }
-
 export default PostSummaryItem;

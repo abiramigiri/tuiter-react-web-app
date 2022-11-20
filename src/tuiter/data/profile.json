@@ -1,16 +1,14 @@
-{
-  "_id": 123,
-  "firstName": "Jiayi",
-  "lastName": "Nie",
-  "handle": "@jiayi_nie",
-  "profilePicture": "profile_pic.png",
-  "bannerPicture": "banner.webp",
-  "bio": "Student, Future Software Engineer, Cats Lover. Enjoy web development and open to challenge",
-  "website": "youtube.com/webdevtv",
-  "location": "San Jose, CA",
-  "dateOfBirth": "1998-08-08",
-  "dateJoined": "2020-04",
+[{
+  "firstName": "Jose",
+  "lastName": "Annunziato",
+  "handle": "@jannunzi",
+  "profilePicture": "nodejs.png",
+  "bannerPicture": "js.png",
+  "bio": "Faculty, Software Engineer, AI, Space, and renewable enthusiast. Retuits and likes are not endorsements.",
+  "website": "surghkrhvjkdss.com",
+  "location": "Boston, MA",
+  "dateOfBirth": "01 January 1968",
+  "dateJoined": "April 2009",
   "followingCount": 340,
-  "followersCount": 223,
-  "tuits": 6114
-}
+  "followersCount": 223
+}]

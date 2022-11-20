@@ -5,21 +5,31 @@
     <title>Tuit</title>
 </head>
 <body>
-<a href="navigation.html">Back</a>
+<p><a href="navigation.html">Back</a></p>
 <h1>Tuiter</h1>
+
 <h2>Tuit</h2>
-<img alt="my-img" height="48" src="deku.jpg" width="48">
-<br/>
-<textarea placeholder="What's happening?"></textarea>
-<br>
-<select id="select-one-genre">
-    <option selected value="EVERYONE">Everyone can reply</option>
-    <option value="FOLLOWING">People you follow</option>
-    <option value="MENTIONED">Only people you mention</option>
-</select>
-<hr/>
-<input type='file'/>
-<button>Tuit</button>
-<hr/>
+
+<img src="profile.jpg"
+     width= "48px" height="48px"/>
+
+<form id="form">
+<textarea rows="2" cols="17" placeholder="What's happening?">
+</textarea>
+    <br/>
+    <select id="dropdown">
+        <option selected value="EVERYONE">Everyone can reply</option>
+        <option value="FOLLOWING">People you follow</option>
+        <option value="MENTIONED">
+            Only people you mention</option>
+        <option value="FANTASY">Fantasy</option>
+    </select>
+    </br>
+    <hr>
+    <input type="file" id="img" name="img" accept="image/*"/>
+    <button>Tuit</button>
+    </br>
+    <hr>
+</form>
 </body>
 </html>
