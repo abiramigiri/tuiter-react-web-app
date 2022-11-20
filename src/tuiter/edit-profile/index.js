@@ -50,7 +50,7 @@ const EditProfile = () => {
 
             <div className="position-relative">
                 <img className="w-100" src="/images/banner.webp" alt="banner_pic"/>
-                <img className="position-absolute wd-profile-pic rounded-circle" alt = 'profile pic' src={`/images/${profile.profilePicture}`} width={100}/>
+                <img className="position-absolute wd-profile-pic rounded-circle" src={`/images/${profile.profilePicture}`} width={100}/>
             </div>
             <br />
 

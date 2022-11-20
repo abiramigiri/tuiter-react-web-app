@@ -29,7 +29,7 @@ const TuitStats = ({tuit}) => {
                     ...tuit,
                     dislikes: tuit.dislikes + 1
                 }))}
-                   className="fa-solid fa-thumbs-down me-2"></i>
+                    className="fa-solid fa-thumbs-down me-2"></i>
                 {tuit.dislikes}
             </div>
             <div className="col">
